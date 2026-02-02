@@ -1,0 +1,20 @@
+C:\Users\usuario1\Desktop\Estadistica.py
+import pandas as pd
+import numpy as np
+
+data = {'Ingresos': [1750000, 2500000, 2500000, 2400000, 1750000, 2600000, 2500000, 1500000, 1500000, 1800000, 3600000, 1800000, 2200000, 4500000, 1500000, 2600000, 1500000, 3200000, 2200000, 3000000, 1500000]}
+
+data_frame = pd.DataFrame(data)
+df_ordenado = data_frame.sort_values(by='Ingresos', ascending=False)
+
+print("Dataframe original: ")
+print(data_frame)
+
+media = data_frame['Ingresos'].mean()
+mediana = df_ordenado['Ingresos'].median()
+moda = data_frame['Ingresos'].mode()[0] 
+
+print(f"\n--- Estadística para 'columna_a' ---")
+print(f"Media: {media}")
+print(f"Mediana: {mediana}")
+print(f"Moda: {moda}")
