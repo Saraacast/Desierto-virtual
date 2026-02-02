@@ -1,0 +1,20 @@
+C:\Users\usuario1\Desktop\README.md
+# Desierto Virtual
+
+Modelo interactivo de un desierto en realidad virtual usando A-Frame.
+
+## Características
+
+- Escena 3D de un desierto de noche
+- Pirámide naranja interactiva
+- Cactus verde oscuro
+- Esfera clickeable que cambia el color del cielo
+- Iluminación lunar realista
+
+## Cómo usar
+
+Abre el archivo `desierto.html` en tu navegador web.
+
+### Interactividad
+
+Haz clic en la esfera para cambiar el cielo a azul claro durante 2 segundos.
