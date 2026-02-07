@@ -1,0 +1,36 @@
+# Desierto Virtual - Realidad Virtual en A-Frame
+
+Escena interactiva de un desierto en realidad virtual construida con **A-Frame**, un framework WebGL para crear experiencias VR/3D en el navegador.
+
+## 🎮 Características
+
+- **Escena 3D completa** del desierto con arena, dunas y iluminación lunar
+- **4 cactus interactivos** con flores rosas
+- **Pirámide naranja clickeable** que alterna el color del cielo (naranja ↔ azul)
+- **Cactus con sonido** - reproduce un sonido de viento realista
+- **3 tiendas indígenas (tipis)** distribuidas por el desierto
+- **Estanque/Lago** con efecto metalizado de agua
+- **Sistema de iluminación lunar** realista
+- **Controles de cámara** con cursor del ratón
+
+## 🛠️ Tecnologías
+
+- **A-Frame 1.5.0** - Framework WebGL/WebXR
+- **HTML5** - Estructura
+- **JavaScript vanilla** - Interactividad
+- **Mixkit** - Audio libre (sonido de viento)
+
+## 🚀 Cómo Usar
+
+### Instalación Rápida
+1. Descarga el archivo `desierto.html`
+2. Abre el archivo en cualquier navegador moderno (Chrome, Firefox, Safari, Edge)
+3. ¡Disfruta de la experiencia!
+
+### Con Servidor Local (Opcional)
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
