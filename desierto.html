@@ -11,6 +11,9 @@
   <body>
    
 <a-scene background="color: #0a1f4f">
+      
+      <!-- Audio de viento fuerte -->
+      <audio id="sonido-viento" src="https://assets.mixkit.co/active_storage/sfx/2450/2450-preview.mp3" type="audio/mpeg"></audio>
       <script>
         AFRAME.registerComponent('piramide-click', {
           init: function() {
@@ -29,6 +32,28 @@
                 // Cambiar a azul
                 scene.setAttribute('background', 'color: #0a1f4f');
                 console.log('¡El cielo es azul!');
+              }
+            });
+          }
+        });
+
+        AFRAME.registerComponent('cactus-click', {
+          init: function() {
+            let isPlaying = false;
+            
+            this.el.addEventListener('click', function(e) {
+              const audioViento = document.getElementById('sonido-viento');
+              
+              // Alternar entre reproducir y pausar
+              isPlaying = !isPlaying;
+              
+              if (isPlaying) {
+                audioViento.play();
+                console.log('¡Sonido de viento activado!');
+              } else {
+                audioViento.pause();
+                audioViento.currentTime = 0;
+                console.log('¡Sonido de viento desactivado!');
               }
             });
           }
@@ -96,7 +121,8 @@
         position="25 -0.5 8" 
         radius="0.6" 
         height="3" 
-        color="#1a4d1a">
+        color="#1a4d1a"
+        cactus-click>
       </a-cylinder>
 
       <!-- Brazo izquierdo del cactus -->
@@ -252,6 +278,151 @@
         height="0.5" 
         color="#0a3f7f"
         material="metalness: 0.9; roughness: 0.1;">
+      </a-cylinder>
+
+      <!-- TIPI (TIENDA DE CAMPAÑA ESTILO INDIO) -->
+      <!-- Tipi 1 - Atrás izquierda (zona despejada) -->
+      <!-- Estructura principal del tipi -->
+      <a-cone 
+        id="tipi1"
+        position="-15 0 -25" 
+        radius-bottom="3" 
+        radius-top="0.2" 
+        height="5" 
+        color="#D2B48C"
+        material="metalness: 0.1; roughness: 0.8;">
+      </a-cone>
+
+      <!-- Palo 1 del tipi 1 -->
+      <a-cylinder 
+        position="-15 2.7 -25" 
+        radius="0.15" 
+        height="3" 
+        rotation="30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 2 del tipi 1 -->
+      <a-cylinder 
+        position="-15 2.7 -25" 
+        radius="0.15" 
+        height="3" 
+        rotation="-30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 3 del tipi 1 -->
+      <a-cylinder 
+        position="-15 2.7 -25" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 30" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 4 del tipi 1 -->
+      <a-cylinder 
+        position="-15 2.7 -25" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 -30" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Tipi 2 - Izquierda (zona despejada del suelo) -->
+      <!-- Estructura principal del tipi -->
+      <a-cone 
+        id="tipi2"
+        position="-25 0 -10" 
+        radius-bottom="3" 
+        radius-top="0.2" 
+        height="5" 
+        color="#D2B48C"
+        material="metalness: 0.1; roughness: 0.8;">
+      </a-cone>
+
+      <!-- Palo 1 del tipi 2 -->
+      <a-cylinder 
+        position="-25 2.7 -10" 
+        radius="0.15" 
+        height="3" 
+        rotation="30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 2 del tipi 2 -->
+      <a-cylinder 
+        position="-25 2.7 -10" 
+        radius="0.15" 
+        height="3" 
+        rotation="-30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 3 del tipi 2 -->
+      <a-cylinder 
+        position="-25 2.7 -10" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 30" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 4 del tipi 2 -->
+      <a-cylinder 
+        position="-25 2.7 -10" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 -30" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Tipi 3 - Derecha (zona despejada) -->
+      <!-- Estructura principal del tipi -->
+      <a-cone 
+        id="tipi3"
+        position="8 0 -22" 
+        radius-bottom="3" 
+        radius-top="0.2" 
+        height="5" 
+        color="#D2B48C"
+        material="metalness: 0.1; roughness: 0.8;">
+      </a-cone>
+
+      <!-- Palo 1 del tipi 3 -->
+      <a-cylinder 
+        position="8 2.7 -22" 
+        radius="0.15" 
+        height="3" 
+        rotation="30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 2 del tipi 3 -->
+      <a-cylinder 
+        position="8 2.7 -22" 
+        radius="0.15" 
+        height="3" 
+        rotation="-30 0 0" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 3 del tipi 3 -->
+      <a-cylinder 
+        position="8 2.7 -22" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 30" 
+        color="#8B7355">
+      </a-cylinder>
+
+      <!-- Palo 4 del tipi 3 -->
+      <a-cylinder 
+        position="8 2.7 -22" 
+        radius="0.15" 
+        height="3" 
+        rotation="0 0 -30" 
+        color="#8B7355">
       </a-cylinder>
 
       <!-- PIRÁMIDE PRINCIPAL -->
